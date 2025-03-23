@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* Nav Container */}
+      <nav className="relative container mx-auto p-6">
+        {/* Flex Container For All Items */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-20">
+            {/* Logo */}
+            <img src="images/logo.svg" alt="" />
+            {/* Left Menu */}
+            <div className="hidden space-x-8 font-bold lg:flex">
+              <a
+                href=""
+                className="text-grayishViolet hover:text-veryDarkViolet"
+              >
+                Features
+              </a>
+            </div>
+          </div>
+
+          {/* Right Buttons */}
+          <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
+            <a href="" className="hover:text-veryDarkViolet">
+              Login
+            </a>
+            <a
+              href=""
+              className="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70"
+            >
+              Sign Up
+            </a>
+          </div>
+
+          {/* Todo Hamburger Menu */}
+        </div>
+
+        {/* Todo Mobile Menu */}
+      </nav>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
